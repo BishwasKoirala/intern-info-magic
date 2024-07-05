@@ -20,7 +20,7 @@ const FetchData = () => {
   if (isloading) return <div>Loading...</div>;
 
   return (
-    <div className="flex flex-col items-start p-4 space-y-4">
+    <div className="flex flex-col items-start p-4 space-y-4 text-black">
       <h1 className="text-black text-3xl w-full h-min overflow-y-auto p-4 border border-gray-500 rounded-md shadow-lg">インターン情報</h1>
       <p>
         <button className="bg-green-600 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">

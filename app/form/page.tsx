@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { schema } from "../api/post/route";
+import { schema } from "../api/schema/schema";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

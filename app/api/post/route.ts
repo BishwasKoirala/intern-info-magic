@@ -1,24 +1,8 @@
 import prisma from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
 import { convertToISODate } from "../utils/utils";
 
-export const schema = z.object({
-  company : z.string(),
-  url : z.string(),
-  hiring : z.boolean(),
-  event_name : z.string(),
-  event_detail : z.string(),
-  target_student : z.string(),
-  recruit_begin : z.string(),
-  recruit_end : z.string(),
-  //TODO: nullable fields は入れてない
-  tech_stack : z.string(),
-  remote : z.string()
-
-
-})
-
+import { schema } from "../schema/schema";
 
 export async function POST(req:NextRequest , res : NextResponse) {
 
@@ -51,7 +35,4 @@ export async function POST(req:NextRequest , res : NextResponse) {
     return NextResponse.json({error : error} , {status : 501})
   }
 }
-
-
-
 
