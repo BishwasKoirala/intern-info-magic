@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Interns {
+ id Int @id @default(autoincrement())
+// 主催
+ company String
+ url String
+//  締め切り
+ hiring Boolean
+ event_name String
+ event_detail String
+//  対象者
+ target_student String
+//  募集開始　　
+ recruit_begin DateTime?
+ //  募集締きり
+ recruit_end DateTime?
+ event_term Int?
+ event_begin DateTime?
+ event_end DateTime?
+ tech_stack String
+//  
+ remote String
+//  bool ではありません！！
+//  bool にしたらまた変えなきゃ行けないからとりま放置
+}

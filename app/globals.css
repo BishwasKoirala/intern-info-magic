@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding-bottom: 100px; /* フッターの高さを確保 */
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* フッターの高さを調整 */
+  background-color: #f8f9fa; /* フッターの背景色 */
+  position: fixed; /* フッターを固定 */
+  bottom: 0; /* 画面の下部に固定 */
+  left: 0;
+  width: 100%; /* 画面の幅に合わせる */
+  z-index: 1000;
+}
+
+footer a {
+  display: inline-flex;
+  width: 100%; /* フッター内でボタンが中央に配置される */
+  justify-content: center; /* ボタン内のテキストを中央に配置 */
+  align-items: center; /* ボタン内のテキストを垂直方向に中央に配置 */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
