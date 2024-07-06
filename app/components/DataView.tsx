@@ -53,9 +53,9 @@ const DataView = ({ filterButton }: Props) => {
   if (isloading) return <div>Loading...</div>;
 
   return (
-    <div className="flex flex-col items-start p-2 space-y-2 text-black">
+    <div className="flex flex-col items-start my-20 text-black">
     
-      <div className="w-full h-min overflow-y-auto p-4 border border-gray-300 rounded-md shadow-lg">
+      <div className="w-full  overflow-y-auto pr-3 border border-gray-300 rounded-md shadow-lg">
         {filteredData &&
           filteredData.map((d) => (
             <div key={d.id} className="w-full mb-4 border border-separate border-black rounded m-2 p-2">
