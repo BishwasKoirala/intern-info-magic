@@ -6,7 +6,7 @@ const extendedSchema = originalSchema.extend({
   id: z.number(), // or the appropriate type for 'id'
 });
 
-type Data = z.infer<typeof extendedSchema>
+export type Data = z.infer<typeof extendedSchema>
 export const useFetch = (url: string) => {
   const [data, setData] = useState<Data[]>();
   const [isloading, setIsLoading] = useState(false);

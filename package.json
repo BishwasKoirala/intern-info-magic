@@ -8,21 +8,18 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate"
-
   },
   "dependencies": {
-    "@headlessui/react": "^2.1.1",
-    "@heroicons/react": "^2.1.4",
+
     "@hookform/resolvers": "^3.6.0",
     "@prisma/client": "^5.16.1",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
+
+    "daisyui": "^4.12.10",
     "next": "14.2.4",
     "papaparse": "^5.4.1",
     "prisma": "^5.16.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-dropdown-menu": "^0.0.2",
     "react-hook-form": "^7.52.0",
     "zod": "^3.23.8"
   },

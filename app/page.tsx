@@ -1,25 +1,19 @@
 'use client'
-import FetchData from "./components/FetchData";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { useState } from "react";
+import React, { useState } from 'react'
+import DataView from './components/DataView';
+import Header from './components/Header';
 
-export default function Home() {
-  const [button, setButton] = useState("");
-	const onChange = (e:string) => {
-		setButton(e);
-	};
-
+const page = () => {
+  const [filterButton , setFilterButton] = useState("");
+  const onChange = (e:string) => {
+    setFilterButton(e)
+  }
   return (
     <div>
-      <Header onChange={onChange}> 
-      </Header>
-      <main className="flex h-screen flex-col items-center p-24">
-        <FetchData button={button} />
-      </main>
-      <div>
-        <Footer></Footer>
-      </div>
+      <Header onChange={onChange} />
+      <DataView filterButton={filterButton}/>
     </div>
-  );
+  )
 }
+
+export default page
