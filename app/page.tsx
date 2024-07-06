@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import DataView from './components/DataView';
 import Header from './components/Header';
 
-const page = () => {
+const Page = () => {
   const [filterButton , setFilterButton] = useState("");
   const onChange = (e:string) => {
     setFilterButton(e)
@@ -16,4 +16,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
