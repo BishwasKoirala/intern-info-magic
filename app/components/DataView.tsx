@@ -63,7 +63,7 @@ const DataView = ({ filterButton }: Props) => {
                 {d.company}
               </div>
               <div>
-                <div className="text-xl font-bold mt-2 underline">
+                <div className="text-xl link-primary font-bold mt-2 underline">
                   <Link href={d.url}>{d.event_name}</Link>
                 </div>
                 <div className="text-lg">対象: {d.target_student}</div>
