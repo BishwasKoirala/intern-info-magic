@@ -15,7 +15,10 @@ const DataView = ({ filterButton }: Props) => {
   useEffect(() => {
     if (data) {
       let result = data;
-      if (filterButton === "26卒") {
+      if (filterButton === "全て") {
+        result == data
+      }
+      else if (filterButton === "26卒") {
         result = data.filter((d) => d.target_student.includes("26") || d.target_student.includes("全学年"));
       } else if (filterButton === "27卒") {
         result = data.filter((d) => d.target_student.includes("27") || d.target_student.includes("全学年"));
@@ -50,18 +53,13 @@ const DataView = ({ filterButton }: Props) => {
   if (isloading) return <div>Loading...</div>;
 
   return (
-    <div className="flex flex-col items-start p-4 space-y-4 text-black">
-      <h1 className="text-black text-3xl w-full h-min overflow-y-auto p-4 border border-gray-500 rounded-md shadow-lg">インターン情報</h1>
-      <p>
-        <button className="bg-green-600 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <Link href="/form">追加はこちら</Link>
-        </button>
-      </p>
+    <div className="flex flex-col items-start p-2 space-y-2 text-black">
+    
       <div className="w-full h-min overflow-y-auto p-4 border border-gray-300 rounded-md shadow-lg">
         {filteredData &&
           filteredData.map((d) => (
-            <div key={d.id} className="w-full mb-4">
-              <div className="text-xl font-semibold bg-slate-400 border-r-8 rounded-md shadow-md p-2">
+            <div key={d.id} className="w-full mb-4 border border-separate border-black rounded m-2 p-2">
+              <div className="text-xl font-semibold ">
                 {d.company}
               </div>
               <div>
